@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>How we grade — Preflop Reps</title><link rel="stylesheet" href="style.css"></head>
+<body><main>
+<h1>How we grade</h1>
+<p class="sub">Preflop Reps · the same text as Settings → How we grade in the app</p>
+<p>Every answer comes from one of four kinds of source, and the app says which. Nothing is graded on a hunch.</p>
+<h2>Exact: arithmetic, no opinion</h2>
+<ul>
+<li><strong>Hand against hand.</strong> Equities are exact for all 169 × 169 starting hands, counted over every possible board. Ace-king against queens is 43.24%; aces against kings is 81.95%.</li>
+<li><strong>Pot odds and outs.</strong> The share of the pot you need comes straight from the bet, and a draw's chance comes from counting every turn and river card (all 990 runouts on the flop).</li>
+</ul>
+<h2>Solved (Nash): short stacks</h2>
+<ul>
+<li>The tournament shove-or-fold and call-a-shove charts are Nash equilibrium solutions in chips, worked out from those exact equities for 2 to 9 players, with and without antes. They reproduce the published heads-up chart.</li>
+<li>Rejams at 12–30bb come from the same kind of solve, checked against an independent commercial calculator. They are labelled Nash in the app.</li>
+<li>A shove-or-fold chart answers a game where those are the only two moves. From 16 big blinds up, the usual play first in is a small raise, so the drills stop asking for first-in shoves above 15bb.</li>
+</ul>
+<h2>Standard, three or more publishers: the cheat sheet</h2>
+<ul>
+<li>Opening from each seat, limpers, facing a raise, a raise and callers, the big blind, facing a 3-bet and the sizes are standard ranges, not solved ones.</li>
+<li>A spot ships only when at least three independent publishers agree on it: similar width, with the boundary hands within about one notch. Several articles from one publisher count once. Every card lists its publishers.</li>
+<li>Sizes follow the sheet's own open: 4bb live, 2.5bb online. A 3-bet and a 4-bet are counted from the open you made.</li>
+</ul>
+<h2>Held back: what we leave out</h2>
+<ul>
+<li>When the sources agree on part of a spot but not all of it (which hands to 3-bet, say, but not which to call), the app teaches the part they agree on. It never deals you a hand whose answer they don't.</li>
+<li>The card says what it leaves to your judgement.</li>
+<li>Postflop rules are rules of thumb, and the app says so; none is presented as solved.</li>
+</ul>
+<h2>The stars</h2>
+<ul>
+<li><strong>Three stars:</strong> the main play.</li>
+<li><strong>Two stars:</strong> another play that is standard for that hand.</li>
+<li><strong>One star:</strong> a mistake. You see where the range stops and the size to use, a plain rule, and the chart with the boundary circled.</li>
+</ul>
+<p>The chart you see is drawn from the same table that graded you, so the two cannot disagree.</p>
+<h2>What we don't claim</h2>
+<p>We don't call anything solved that isn't. Standard ranges are good defaults for a typical low-stakes live game, not the last word against every opponent. If a source changes or we find a mistake, we fix the card and say so in the release notes.</p>
+<p>Think a hand is graded wrong? <a href="https://github.com/redkiho/preflop-reps-site/issues/new">Open an issue</a> with the position, stack and hand.</p>
+<footer><a href="index.html">Preflop Reps</a> · <a href="privacy.html">Privacy</a></footer>
+</main></body></html>
