@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#0e1015">
+  <meta name="description" content="Eight common preflop spots from a live poker game. Choose your play, then see where the line is and why. A free sample of Preflop Reps, a poker study aid.">
+  <title>What's the Play? · Preflop Reps</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="drill.css">
+  <script type="module" src="drill.js"></script>
+</head>
+<body>
+  <main class="drill">
+    <nav aria-label="Preflop Reps">
+      <a class="home" href="../">Preflop Reps</a>
+      <a href="../grading.html">How we grade</a>
+    </nav>
+
+    <header>
+      <span class="mark">Free sample</span>
+      <h1>What's the play?</h1>
+      <p class="sub">Eight common spots from a live game. Choose your play, then see where the line is.</p>
+    </header>
+
+    <section class="card practice" id="practice" aria-label="Drill" hidden>
+      <div class="position">
+        <p id="position" tabindex="-1"></p>
+        <progress id="progress" value="0" aria-label="Hands answered"></progress>
+      </div>
+
+      <div id="question">
+        <p id="spot" class="spot"></p>
+        <div id="table" class="table" role="img"></div>
+        <p id="pot" class="pot"></p>
+        <details id="story">
+          <summary>The action so far, in words</summary>
+          <p id="action"></p>
+        </details>
+        <div class="holding">
+          <div id="cards" class="cards" role="img"></div>
+          <p>You hold <strong id="hand"></strong></p>
+        </div>
+        <h2 id="prompt"></h2>
+        <div id="options" class="options" role="group" aria-label="Your play"></div>
+      </div>
+
+      <div id="feedback" class="feedback" hidden>
+        <h2 id="verdict" tabindex="-1"></h2>
+        <p class="play">The play: <strong id="play"></strong></p>
+        <p id="chose"></p>
+        <div class="line">
+          <h3>Where the line is</h3>
+          <p id="line"></p>
+          <h3 id="size-label">The size</h3>
+          <p id="size"></p>
+        </div>
+        <p id="rule"></p>
+        <p class="fine">A standard range, not a solved one. <a href="../grading.html">How we grade</a></p>
+        <button id="next" class="action" type="button">Next hand</button>
+      </div>
+
+      <details id="glossary">
+        <summary>Poker words in this hand</summary>
+        <dl id="words"></dl>
+      </details>
+
+      <div id="result" class="result" hidden>
+        <h2 id="score" tabindex="-1"></h2>
+        <p>Preflop Reps for iPhone and iPad drills every spot on its live-game cheat sheet this way: the play, where the line is, and how much to bet.</p>
+        <p><strong>Free:</strong> the whole live-game cheat sheet, its lessons and cheat cards, 3 sets of ten a day, the daily hand and review sets. No account.</p>
+        <p><strong>Paid:</strong> the Tournament Pack (short-stack shoves and calls, antes, heads-up and rejams) and Pro (unlimited sets and everything in the pack).</p>
+        <a id="store" class="action" href="https://apps.apple.com/app/apple-store/id6815503902?pt=129483148&amp;ct=preflop-web-drill&amp;mt=8">View on the App Store</a>
+        <button id="again" type="button">Try again</button>
+        <p class="fine">For adults. The App Store shows the age rating where you live.</p>
+      </div>
+    </section>
+    <p id="unsupported" class="notice" hidden>The drill did not start. Reload the page, or try a newer browser. Preflop Reps for iPhone and iPad asks the same spots.</p>
+    <noscript><p class="notice">Turn on JavaScript in your browser to try the drill.</p></noscript>
+    <script>
+      // If the drill's script has not started after four seconds (an old browser, or a file that did not load), say so.
+      setTimeout(function () {
+        if (!window.drillStarted) document.getElementById('unsupported').hidden = false;
+      }, 4000);
+    </script>
+
+    <footer>
+      <p>Each spot is at a nine-handed table with 100 big blinds. Answers are the app's standard ranges, not solved ones, built from published charts, some of them six-handed. A spot is in the app only when at least three independent publishers agree on it: similar width, with the hands at the edge within about one notch. They are good defaults for a typical low-stakes live game, not the last word against every opponent. <a href="../grading.html">How we grade</a></p>
+      <p>Your own open is 4 big blinds; a raise you face is shown at 3. Those are the app's sizes for a live game.</p>
+      <p>A study aid for adults. Nothing here is played for money.</p>
+      <p>This page sets no cookies, keeps nothing of its own on your device and sends nothing to the developer. GitHub hosts it and, like any web host, receives your IP address and browser details when the page loads. The App Store link carries a campaign tag: Apple counts the store page views, downloads, purchases and app use tied to it, and shows the developer aggregate figures, never who you are. Some of those figures depend on your Apple analytics-sharing choice.</p>
+      <p>What the app itself collects is in its <a href="../privacy.html">privacy policy</a>.</p>
+    </footer>
+  </main>
+</body>
+</html>
