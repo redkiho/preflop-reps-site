@@ -1,0 +1,102 @@
+.sample { max-width: 62rem; }
+
+.sample nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: clamp(2rem, 5vw, 4.5rem);
+  padding-bottom: .85rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.wordmark {
+  font-size: 1.25rem;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.drill-layout {
+  display: grid;
+  grid-template-columns: minmax(0, .85fr) minmax(0, 1fr);
+  align-items: start;
+  gap: clamp(2.5rem, 6vw, 5rem);
+}
+
+.intro h1 { font-size: clamp(2.7rem, 7.3vw, 5rem); letter-spacing: -.055em; }
+.intro p { color: var(--secondary); max-width: 24ch; margin-top: 1.1rem; }
+
+.practice {
+  padding: clamp(1rem, 4vw, 2rem);
+  border: 1px solid var(--line);
+  border-radius: 1.5rem;
+  background: color-mix(in srgb, var(--ground) 94%, var(--ink));
+}
+
+[hidden] { display: none !important; }
+
+.position {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: center;
+  gap: 1rem;
+  color: var(--secondary);
+}
+.position p { margin: 0; }
+.progress, progress { width: 100%; accent-color: var(--ink); }
+
+#word {
+  padding-block: .85rem;
+  font-size: clamp(2.8rem, 7.8vw, 4rem);
+  line-height: 1.25;
+  letter-spacing: -.035em;
+}
+
+.options { display: grid; gap: .65rem; }
+button, .action {
+  min-height: 2.875rem;
+  padding: .65rem 1rem;
+  border: 1px solid var(--line);
+  /* A control's edge needs 3:1 against the ground. Browsers without color-mix keep the line colour. */
+  border-color: color-mix(in srgb, var(--ink) 50%, var(--ground));
+  border-radius: .75rem;
+  color: var(--ink);
+  background: var(--ground);
+  font: inherit;
+  cursor: pointer;
+}
+
+button:hover { border-color: var(--ink); }
+button:focus-visible, [tabindex="-1"]:focus-visible { outline: 2px solid currentColor; outline-offset: 3px; }
+.options button { font-size: 1.18rem; font-weight: 650; text-align: start; }
+
+.feedback, .result {
+  padding-top: .85rem;
+  border-top: 1px solid var(--line);
+}
+
+.result { margin-top: 1rem; }
+#reveal { font-size: 2rem; line-height: 1.2; font-weight: 800; }
+.article { color: var(--secondary); font-size: .9rem; }
+
+.action {
+  display: inline-flex;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1.1rem;
+  font-weight: 650;
+  color: var(--ground);
+  background: var(--ink);
+  border-color: var(--ink);
+  text-decoration: none;
+}
+
+.action:focus-visible { outline-color: var(--ink); }
+#again { margin-top: 1rem; }
+.sample footer p { color: var(--secondary); margin: 0 0 .7rem; }
+
+@media (max-width: 42rem) {
+  .drill-layout { grid-template-columns: minmax(0, 1fr); gap: 1.25rem; }
+  .title-break { display: none; }
+  .intro p { max-width: 36ch; margin-top: .65rem; }
+}

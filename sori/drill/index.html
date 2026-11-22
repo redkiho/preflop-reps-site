@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Try six Korean pronunciation questions from Sori. Pick how each word is said and see the rule behind its sound.">
+  <title>Korean Pronunciation Drill · Sori</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="drill.css">
+  <script type="module" src="drill.js"></script>
+</head>
+<body>
+  <main class="sample">
+    <nav aria-label="Sori">
+      <a class="wordmark" aria-label="Sori support" href="../"><span lang="ko">[소리]</span></a>
+      <a href="../">Support</a>
+    </nav>
+
+    <div class="drill-layout">
+      <header class="intro">
+        <h1>How is<br class="title-break"> this said?</h1>
+        <p>Pick how each Korean word sounds. After each answer, see the rule behind the change.</p>
+      </header>
+
+      <div class="practice" id="practice" hidden>
+        <div class="position">
+          <p id="position"></p>
+          <progress id="progress" value="0" aria-label="Questions answered"></progress>
+        </div>
+        <div id="question">
+          <h2 id="word" lang="ko" tabindex="-1"></h2>
+          <div id="options" class="options" role="group" aria-label="Pronunciation choices"></div>
+        </div>
+        <div id="feedback" class="feedback" hidden>
+          <h2 id="verdict" tabindex="-1"></h2>
+          <p id="reveal" lang="ko"></p>
+          <p id="reason"></p>
+          <p id="article" class="article"></p>
+          <button id="next" class="action" type="button">Next word</button>
+        </div>
+        <div id="result" class="result" hidden>
+          <h2 id="score" tabindex="-1"></h2>
+          <p>Practice all six rules in Sori for iPhone and iPad. The first two chapters are free.</p>
+          <a id="store" class="action" href="https://apps.apple.com/app/apple-store/id6837568195?pt=129483148&amp;ct=sori-web-drill&amp;mt=8">View on the App Store</a>
+          <button id="again" type="button">Try again</button>
+        </div>
+      </div>
+      <noscript><p>Enable JavaScript in your browser to try the drill.</p></noscript>
+    </div>
+
+    <footer>
+      <p>Word list: National Institute of Korean Language, <span lang="ko">한국어 학습용 어휘 목록</span> (2003), KOGL type 1.</p>
+      <p>This page sends nothing to the developer. Its App Store link carries a campaign tag, so Apple reports how many installs came from this page, as a total.</p>
+      <a href="../privacy.html">Privacy Policy</a>
+    </footer>
+  </main>
+</body>
+</html>
